@@ -1,11 +1,17 @@
 #define THRESHOLD 40  // Greater the value, more the sensitivity (wake-up Pin)
 
-#include <Arduino.h>
 #include <Wire.h>
 #include "I2SInit.h"
-#include "WifiSetup.h" // contains general "customDelay()" function
+#include "WifiSetup.h" 
+#include "SpiffSetup.h"
 
 #define record_Pin 35  // record audio while holding a button
+
+void customDelay(unsigned int milliseconds) {
+  unsigned int startTime = millis();
+  while (millis() - startTime < milliseconds) {
+  }
+}
 
 void print_wakeup_touchpad() {
   touch_pad_t touchPin = esp_sleep_get_touchpad_wakeup_status();
@@ -70,4 +76,5 @@ void setup() {
 }
 
 void loop() {
+
 }

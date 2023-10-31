@@ -3,9 +3,6 @@
 
 #define wifi_state_Pin 26  // wifi status LED
 
-#define WIFI_SSID "Galaxy A526AD7"
-#define WIFI_PASSWORD "pqmm9039"
-
 #include <WiFi.h>
 
 void connectToWiFi();
